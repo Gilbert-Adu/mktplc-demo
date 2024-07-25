@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../../fonts/ClashDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body {
+    overflow-x: hidden;
+}
+
+.navbar-wrapper {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+
+}
+.signup-navbar-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+
+}
+
+.nav-left{
+    margin-left: 5vw;
+    font-family: 'CustomFont', "Inter", sans-serif;
+}
+.nav-right {
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.join{
+    border: 1px solid #3FA2F6;
+    color: #3FA2F6;
+    border-radius: 5px;
+    padding: 1vh 1vw;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.join:hover {
+    background-color: #3FA2F6;
+    color: white;
+}
+
+.pro, .explore, .sign-in {
+    opacity: 0.8;
+    color: black;
+    transition: color 0.3s ease-in-out;
+
+
+}
+.pro:hover, .explore:hover, .sign-in:hover {
+    opacity: 1;
+    color: #3FA2F6;
+}
+
+.hero-container{
+    height: 100vh;
+}
+
+.hero-background-wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+.hero-left {
+    margin-left: 5vw;
+    margin-top: 20vh;
+}
+.hero-right {
+    margin-right: 0;
+    margin-top: 10vh;
+
+
+}
+
+.hero-blob-purple{
+    position: absolute;
+    top: 20vh;
+    right: 0;  
+    fill: #EB3678;
+    width: 40vmax;
+    z-index: -1;
+    animation: move 10s ease-in-out infinite;
+    transform-origin: 50% 50%;
+    filter: blur(100px);
+    animation: move 10s ease-in-out infinite;
+
+
+  
+
+
+}
+.hero-blob-pink {
+    position: absolute;
+    top: 50vh;
+    right: 20vw;
+    fill: #AF47D2;
+    width: 40vmax;
+    z-index: -1;
+    animation: move 10s ease-in-out infinite;
+    transform-origin: 50% 50%;
+    filter: blur(100px);
+    animation: move 10s ease-in-out infinite;
+
+}
+@keyframes move {
+  0%   { transform: scale(1)   translate(10px, 30px); }
+  38%  { transform: scale(0.8, 1) translate(-80vw, -30vh) rotate(160deg); }
+  40%  { transform: scale(0.8, 1) translate(-80vw, -30vh) rotate(160deg); }
+  78%  { transform: scale(1.3) translate(0vw, -50vh) rotate(-20deg); }
+  80%  { transform: scale(1.3) translate(0vw, -50vh) rotate(-20deg); }
+  100% { transform: scale(1)   translate(10px, 30px); }
+}
+
+
+.text-highlighted, .text-unhighlighted {
+    font-size: 70px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.1;
+
+}
+a {
+    text-decoration: none;
+}
+
+.text-highlighted {
+    color: #3FA2F6;
+
+}
+.hero-blurb{
+    font-size: 15px;
+    width: 30vw;
+    margin-left: 0;
+    margin-top: 4vh;
+    font-family: "Poppins", sans-serif;
+
+
+}
+
+.hero-buttons-container {
+    
+    margin-left: 0;
+    margin-top: 5vh;
+    gap: 0;
+}
+
+.hero-buttons-right {
+    margin-left: 1vw;
+    padding: 1vh 1vw;
+    font-family: "Poppins", sans-serif;
+    background-color: #3FA2F6;
+    border: 1px solid #3FA2F6;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 1px 1px  #3FA2F6;
+
+
+}
+.hero-buttons-left {
+    padding: 1vh 1vw;
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 1px 1px #ddd;
+
+
+
+}
+
+.hero-badge {
+    background-color: rgba(63, 162, 246, 0.5);
+    color: #3FA2F6;
+    width: 8vw;
+    margin-left: 0;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 5vh;
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.signup-message {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+
+}
+.signup-options-container {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.signup-options-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.signup-client, .signup-freelancer {
+    width: 20vw;
+    border: 1px solid #ddd;
+    height: 25vh;
+    margin-top: 5vh;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    padding-top: 10vh;
+    margin-bottom: 5vh;
+    font-family: "Poppins", sans-serif;
+
+
+    
+}
+.signup-freelancer {
+    margin-left: 1vw;
+}
+
+.active-option {
+    border: 1px solid #3FA2F6;
+
+}
+.client-button, .freelancer-button {
+    padding: 1vh 1vw;
+    background-color: #3FA2F6;
+    color: white;
+    border: 1px solid #3FA2F6;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    visibility: hidden;
+}
+
+.button-active{
+    visibility: visible;
+
+}
+.button-inactive{
+    visibility: hidden;
+
+}
+
+.signin-redirect{
+    font-family: "Poppins", sans-serif;
+    margin-top: 2vh;
+}
+
+.clients-container {
+    margin-top: 30vh;
+
+}
+
+.clients-text {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.5);
+
+}
+
+
+.clients-logo {
+    height: 50px;
+    margin: 0 20px;
+  }
+
+.clients-logo-container {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+
+}
+@keyframes scroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .clients-wrapper {
+    position: relative;
+    width: 80%;
+    height: 200px;
+    overflow: hidden;
+}
+
+  .blur {
+    position: absolute;
+    top: 90vh;
+    bottom: 0;
+    width: 100px;
+    z-index: 10;
+  }
+  
+  .left {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(240, 240, 240, 0));
+  }
+  
+  .right {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(240, 240, 240, 0));
+  }
+
+  .hero-right-image {
+    width: 50vw;
+    height: 80vh;
+    border-radius: 10px;
+
+
+  }
+
+  .hero-right-image img {
+    width: 50vw;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  

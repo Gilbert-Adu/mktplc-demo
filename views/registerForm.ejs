@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/styles/registerForm/desktop.css">
+        <link rel="stylesheet" type="text/css" href="/styles/registerForm/mobile.css">
+        <link rel="stylesheet" type="text/css" href="/styles/registerForm/tablet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="navbar-wrapper">
+            <div class="nav-left"><span style="font-weight: bold;font-size: 20px;cursor: pointer;text-decoration: none;"><a href="/" style="text-decoration: none;color: black;">SkillsMkt</a></span><span style="color: #3FA2F6;font-weight: bold;font-size: 25px;"> .</span></div>
+        </nav>
+
+        <div class="form-container">
+            <div class="form-text">
+                <span class="form-text-raw">Log in to</span>
+                 <span class="form-text-logo">SkillsMkt <span style="color: #3FA2F6;">.</span></span>
+            </div>
+
+            <div class="form-group">
+                <form action="/signin" method="POST">
+                    <input type="text" class="username" id="username" placeholder="Username or Email" required>
+                    <input type="password" class="password" id="password" placeholder="Password" required>
+
+                    <button class="continue-signin" id="signin" type="submit">Sign In</button>
+
+                </form>
+                <div class="or-group">----------- or ------------</div>
+
+                <div class="thirdparty-signin">
+                    <button class="google-signin">Continue with Google</button>
+                    <button class="apple-signin">Continue with Apple</button>
+
+                </div>
+
+                <div class="no-account-text">--- Don't have a SkillsMkt account? ---</div>
+                <a href="/signup">
+                    <button class="signup">Sign Up</button>
+
+                </a>
+            </div>
+
+        </div>
+
+        <script>
+            const username = document.getElementById('username');
+            const password = document.getElementById('password');
+
+            document.getElementById('signin').addEventListener('click', async () => {
+                await fetch('/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+
+                    },
+                    body: JSON.stringify({"username": username.value, "password": password.value})
+                })
+
+
+            });
+        </script>
+    </body>
+</html>

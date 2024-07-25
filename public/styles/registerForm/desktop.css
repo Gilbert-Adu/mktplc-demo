@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../../fonts/ClashDisplay.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.navbar-wrapper {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+
+}
+
+.nav-left{
+    margin-left: 5vw;
+    font-family: 'CustomFont', "Inter", sans-serif;
+}
+.nav-right {
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    margin-top: 10vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    height: 80vh;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+
+
+}
+.form-text {
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 20px;
+}
+
+.form-text-raw{
+    font-family: "Poppins", sans-serif;
+
+}
+.form-text-logo{
+    font-family: 'CustomFont', "Inter", sans-serif;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vh;
+    height: 60vh;
+}
+.username {
+    border: 1px solid #ddd;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    height: 5vh;
+    border-radius: 5px;
+
+}
+.password {
+    border: 1px solid #ddd;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    height: 5vh;
+    border-radius: 5px;
+    margin-top: 1vh;
+
+}
+
+.continue-signin {
+    background-color: rgb(33, 131, 216);
+    width: 100%;
+    padding: 1vh;
+    color: white;
+    border: 1px solid rgb(33, 131, 216);
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 5vh;
+    font-weight: bold;
+
+}
+.continue-signin:hover {
+background-color: rgba(63, 162, 246, 1);
+border-color: rgba(63, 162, 246, 1);
+
+
+}
+
+.or-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5vh;
+    color: #ddd;
+
+}
+.or-right, .or-left {
+    border-top: 1px solid #ddd;
+}
+
+.google-signin {
+    background-color: rgba(63, 162, 246, 1);
+    width: 100%;
+    padding: 1vh;
+    color: white;
+    border: 1px solid rgba(63, 162, 246, 1);
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 5vh;
+    font-weight: bold;
+
+}
+
+.apple-signin {
+    background-color: white;
+    width: 100%;
+    padding: 1vh;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 2vh;
+    font-weight: bold;
+
+}
+
+.no-account-text {
+    color: #ddd;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.signup {
+    margin-top: 5vh;
+    border: 1px solid rgb(33, 131, 216);
+    margin-left: 10vw;
+    margin-right: 5vw;
+    width: 10vw;
+    background-color: white;
+    color: rgb(33, 131, 216);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1vh 1vw;
+    cursor: pointer;
+}

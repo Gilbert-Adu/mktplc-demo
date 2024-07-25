@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" type="text/css" href="/styles/home/desktop.css">
+        <link rel="stylesheet" type="text/css" href="/styles/home/mobile.css">
+        <link rel="stylesheet" type="text/css" href="/styles/home/tablet.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <nav class="signup-navbar-wrapper">
+            <div class="nav-left"><span style="font-weight: bold;font-size: 20px;cursor: pointer;text-decoration: none;"><a href="/" style="text-decoration: none;color: black;">SkillsMkt</a></span><span style="color: #3FA2F6;font-weight: bold;font-size: 25px;"> .</span></div>
+    </nav>
+
+    <div class="signup-options-container">
+        <div class="signup-message">Join as client or freelancer</div>
+        <div class="signup-options-wrapper">
+            <div class="signup-client"  id="signup-client">
+                I'm a client, hiring for a project
+            </div>
+            <div class="signup-freelancer" id="signup-freelancer">
+                I'm a freelancer, looking for work
+            </div>
+
+        </div>
+        <span>
+            <a href="/client-home">
+                <button class="client-button" id="client-button">Join as a Client</button>
+            </a>
+
+        </span>
+        <span>
+            <button class="freelancer-button" id="freelancer-button">Apply as a freelancer</button>
+
+        </span>
+        <div class="signin-redirect">
+            Already have an account? <a href="/signin" style="color: #3FA2F6">Sign in</a>
+        </div>
+
+    </div>
+
+    <script>
+        const client = document.getElementById('signup-client');
+        const freelancer = document.getElementById('signup-freelancer');
+        const clientButton = document.getElementById('client-button');
+        const freelancerButton = document.getElementById('freelancer-button')
+
+
+        client.addEventListener('click', () => {
+            freelancer.classList.remove('active-option');
+            client.classList.add('active-option');
+
+            freelancerButton.classList.remove('button-active');
+            freelancerButton.classList.add('button-inactive');
+
+            clientButton.classList.remove('button-inactive');
+            clientButton.classList.add('button-active');
+
+
+            
+
+
+
+        })
+        freelancer.addEventListener('click', () => {
+            client.classList.remove('active-option');
+            freelancer.classList.add('active-option');
+
+            freelancerButton.classList.remove('button-inactive');
+            freelancerButton.classList.add('button-active');
+
+            clientButton.classList.remove('button-active');
+            clientButton.classList.add('button-inactive');
+
+
+        })
+
+
+
+    </script>
+
+</html>
